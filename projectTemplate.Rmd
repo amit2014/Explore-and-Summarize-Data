@@ -5,9 +5,9 @@ output:
     highlight: textmate
 ---
 
-<h1>Explore and Summarize Data by <a href="https://www.linkedin.com/in/thong-tran-0b023299">Buu Thong Tran</a></h1>
-
-<button><a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/wineQualityReds.csv">Download data</a></button>
+<h1 style="text-align:center;">Explore and Summarize Data by <a href="https://www.linkedin.com/in/thong-tran-0b023299">Buu Thong Tran</a></h1>
+<h2 style="color: #66ff66; text-align:center;">Udacity Data Analyst Project 4</h2>
+<button style="display: block; margin: 0 auto;"><a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/wineQualityReds.csv">Download data</a></button>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
 # Load all of the packages that you end up using
@@ -438,13 +438,12 @@ The distribution of red wine quality appears to be normal. 82.5% of wines are ra
 ```{r Plot_Two}
 bi_qplot(quality.level, citric.acid, "boxplot") +
   xlab("Quality level") +
-  ylab("Citric acid")
+  ylab("Citric acid (g/dm^3)")
 ```
 
 ### Description Two
 
 While citric citric do not have a strong correlation with quality, it is an important component in the quality of wine. Because citric acid is an organic acid that contributes to the total acidity of a wine, it is crucial to have a righ amount of citric acid in wine. Adding citric acid will give the wine "freshness" otherwise not present and will effectively make a wine more acidic. Wines with citric acid exceeding 0.75 are hardly rated as high quality. 50% of high quality wines have a relatively high citric acid that ranges between 0.3 and 0.49, whereas average and low quality wines have lower amount of citric acid.
-, it is an important component that impacts the quality of wine.
 
 ### Plot Three
 
@@ -484,4 +483,4 @@ The wines data set contains information on 1599 wines across twelve variables fr
 
 There was a trend between the volatile acidity of a wine and its quality. There was also a trend between the alcohol and its quality. For the linear model, all wines were included since information on quality, volatile acidity and alcohol were available for all the wines. The third linear model with 2 variables were able to account for 31.6% of the variance in the dataset. 
 
-There are very few wines that are rated as low or high quality. We could improve the quality of our analysis by collecting more data, and creating more variables that may contribute to the quality of wine. This will certainly improve the accuracy of the prediction models. With that said, we have successfully identified features that impact the quality of red wine; we have visualize their relationships and summarize their statistics.
+There are very few wines that are rated as low or high quality. We could improve the quality of our analysis by collecting more data, and creating more variables that may contribute to the quality of wine. This will certainly improve the accuracy of the prediction models. Having said that, we have successfully identified features that impact the quality of red wine, visualized their relationships and summarized their statistics.
